@@ -1,0 +1,38 @@
+
+@mixin fluid-text($max: 16, $min: 14) {
+   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+ }
+ @mixin fluid-title($max: 40, $min: 24) {
+   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+ }
+ @mixin flex-center {
+   justify-content: center;
+   align-items: center;
+   display: flex;
+ }
+ @mixin padding-y {
+   margin-top: 30px;
+   margin-bottom: 20px;
+ }
+ @mixin margin-bottom {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+ }
+ @mixin rounded-btn {
+border-radius: 37px;
+width: 187px;
+height: 48px;
+align-items: center;
+padding: 10px 36px 10px 36px;
+margin: 0px 10px;
+font-size: 14px;
+ }
+ @mixin square-bnt {
+border-radius: 0px 5px;
+width: 160px;
+height: 58px;
+padding: 15px 40px 15px 40px;
+margin: 0px 0px;
+
+ }
