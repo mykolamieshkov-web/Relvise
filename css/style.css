@@ -206,14 +206,14 @@ body {
 header.header {
   width: 100%;
   height: 100vh;
-  background-image: url("https://raw.githubusercontent.com/mykolamieshkov-web/Relvise/main/img/header/background.png");
+  background-image: url("/img/header/background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (max-width: 768px) {
   header.header {
-    height: 793px;
+    height: 430px;
     max-width: 100%;
     background-size: contain;
     background-position: top;
