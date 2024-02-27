@@ -20,7 +20,6 @@ header.header {
 
    }
    @include mobile-s {
-      height: 10ovh;
       background-size: contain;
       max-width: 390px;
       background-position: center;
