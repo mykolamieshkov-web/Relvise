@@ -3,6 +3,9 @@
    color: var(--second-text-color);
    font-weight: 500;
    line-height: 20px;
+   @include mobile-s {
+      line-height: 18px;
+   }
 }
 @mixin fluid-h1 ($max:58, $min:24){
    font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
@@ -10,23 +13,35 @@
    font-weight: 800;
    line-height: 80px;
    letter-spacing: 0.2px;
-   text-align: center;
+   text-align: left;
    @include tablet {
       line-height: 45px;
    }
+   @include mobile-s {
+      line-height: 32px;
+   }
 }
-@mixin fluid-title($max:40, $min: 24) {
-font-size: clamp(#{min}px, #{$max / 1440 * 100}vw, #{max}px);
+@mixin fluid-title($max: 40, $min: 24) {
+font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
 font-weight: 700;
 line-height: 57px;
 letter-spacing: 0.2px;
 text-align: left;
 color: var(--text-color);
+@include tablet {
+   font-weight: normal;
+   line-height: 32px;
+   letter-spacing: 0.1px;
+}
 
 }
 @mixin flex-center {
    display: flex;
    justify-content: center;
+   align-items: center;
+}
+@mixin flex-start {
+   justify-content: flex-start;
    align-items: center;
 }
 @mixin button {
@@ -37,10 +52,18 @@ text-align: center;
 padding: 10px 36px 10px 36px;
 margin: 0px 10px;
 border-radius: 37px;
+font-size: 14px;
+text-wrap: nowrap;
 @include tablet {
    padding: 8px 20px;
    margin: 0px 5px;
    width: 120px;
    height: 40px;
+}
+@include mobile {
+   padding: 2.2px 8px;
+   margin: 0px 2.5px;
+   width: 100px;
+   height: 28px;
 }
 }
