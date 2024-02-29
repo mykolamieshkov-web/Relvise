@@ -1,6 +1,6 @@
 header.header {
    width: 100%;
-   height: 100vh;
+   height: 924px;
    background-image: url("../img/header/background.png");
    background-repeat: no-repeat;
    background-position: center;
@@ -202,12 +202,12 @@ height: 40px;
    max-width: 100%;
    display: flex;
    flex-direction: row;
-   margin:  0px;
+   margin:  22% 0;
    padding: 0px;
    justify-content: space-between;
    @include tablet {
       max-width: $tablet;
-      margin: 30px 0px;
+      margin: 8px 0px;
       gap: 1.1rem;
       width: 100%;
       justify-content: center;
@@ -215,7 +215,7 @@ height: 40px;
    @include mobile {
       max-width: $mobile;
       justify-content: center;
-      margin: 15px 0px;
+      margin: 0;
       width: 100%;
       gap: 1rem;
    }
