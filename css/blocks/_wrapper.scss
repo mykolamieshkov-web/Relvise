@@ -1,3 +1,4 @@
+
 .wrapper {
    /* Общие стили */
    max-width:100%;
@@ -5,8 +6,8 @@
    height: auto;
    min-height: 100%;
   
-   @include desktop {
-    max-width: 1440px;
+   @include laptop {
+    max-width: 1220px;
    }
    @include tablet {
      max-width: 780px;

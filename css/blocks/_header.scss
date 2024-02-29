@@ -199,12 +199,11 @@ height: 40px;
 // -------
 .header-cards {
    width: 100%;
-   max-width: 1440px;
+   max-width: 100%;
    display: flex;
    flex-direction: row;
-   margin: 80px 0px;
+   margin:  0px;
    padding: 0px;
-   align-items: center;
    justify-content: space-between;
    @include tablet {
       max-width: $tablet;
@@ -229,7 +228,7 @@ height: 40px;
    }
 &__card {
    background-color: var(--light-text-color);
-   width: 328px;
+   width: calc($laptop / 3);
    height: 242px;
    padding: 35px 40px;
    /* SHADOW */

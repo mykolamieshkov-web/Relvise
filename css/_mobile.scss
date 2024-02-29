@@ -1,5 +1,5 @@
 // лаптоп
-$desktop: 1440px;
+$laptop: 1220px;
 // планшет
 $tablet: 768px;
 // мобилки
@@ -8,8 +8,8 @@ $mobile:500px;
 $mobile-s:390px;
 
 
-@mixin desktop {
-  @media (max-width: $desktop) {
+@mixin laptop {
+  @media (max-width: $laptop) {
     @content;
   }
 }
