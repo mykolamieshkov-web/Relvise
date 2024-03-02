@@ -67,3 +67,19 @@ white-space: nowrap;
    height: 28px;
 }
 }
+@mixin button-square {
+   transition: backround-color 3ms ease;
+   margin-top: 30px;
+   width:117px;
+   height: 58px;
+   padding: 15px 22px;
+   text-align: center;
+   border-radius: 0px 5px;
+   @include fluid-text; 
+   @include tablet {
+      width: 100px;
+      height: 40px;
+      padding: 10px 14px;
+      
+   }
+}

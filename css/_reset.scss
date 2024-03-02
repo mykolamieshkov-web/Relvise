@@ -26,7 +26,7 @@ a {
   }
 }
 
-nav, footer, header, aside {
+ footer {
   display: block;
 }
 
@@ -87,9 +87,7 @@ ul, ol {
   padding-left: 0;
 }
 
-ul[class] {
-  list-style: none;
-}
+
 
 /* Дополнительные стили */
 
