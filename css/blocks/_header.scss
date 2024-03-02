@@ -5,21 +5,26 @@ header.header {
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   margin-bottom: 2%;
+   overflow: hidden;
+   
   
    @include tablet {
-      height: 430px;
+      height: 65vh;
       max-width: 100%;
       background-size: 68%;
       background-position: top;
    }
    @include mobile {
       background-size: contain;
+      height: 100vh;
       width: 100%;
       max-width: 500px;
       background-position: center;
 
    }
    @include mobile-s {
+      height: 100vh;
       background-size: contain;
       max-width: 390px;
       background-position: center;
@@ -202,12 +207,12 @@ height: 40px;
    max-width: 100%;
    display: flex;
    flex-direction: row;
-   margin:  22% 0;
+   margin:  80px 0;
    padding: 0px;
    justify-content: space-between;
    @include tablet {
       max-width: $tablet;
-      margin: 8px 0px;
+      margin: 30px 0;
       gap: 1.1rem;
       width: 100%;
       justify-content: center;
@@ -218,11 +223,12 @@ height: 40px;
       margin: 0;
       width: 100%;
       gap: 1rem;
+      margin: 18% 0;
    }
    @include mobile-s {
       max-width: $mobile-s;
       justify-content: center;
-      margin: 0px;
+      margin: 1.2rem 0;
       width: 100%;
       gap: 0.3rem;
    }

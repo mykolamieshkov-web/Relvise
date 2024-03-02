@@ -1,1 +1,137 @@
 // styles for main here! 
+main.main {
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   padding: 0;
+   margin: 10px 0;
+}
+.main-block {
+ display: flex;
+ flex-direction: column;
+   width: 100%;
+   height: 526px;
+   max-width: 100%;
+ 
+ &__title {
+   justify-content: center;
+   align-self: center;
+   width: 609px;
+   height: 57px;
+   padding: 0;
+   margin: 10px 0;
+ }  
+ &__title--item {
+  
+
+   h2 {
+      @include fluid-title;
+      text-align: center; 
+   }
+ }
+ &__subtitle {
+   width: 100%;
+   height: 40px;
+   max-width: 100%;
+   justify-content: center;
+ }
+ &__subtitle--item {
+   p {
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      align-self: center;
+
+   }
+ }
+}
+.repeated-text-content {
+   width: 100%;
+   height: 107px;
+   margin: 0 auto;
+   padding: 0;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+}
+// ---------
+.main-row {
+   margin-top: 50px;
+   width: 100%;
+   height: 209px;
+   max-width: 1049px;
+   padding: 0;
+   margin-top: 50px;
+   display: flex;
+   justify-content: space-between;
+  align-items: center;
+  align-self: center;
+   gap: 30px;
+   flex-direction: row;
+
+
+   &__block {
+      width: calc(1440px / 4);
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 40px;
+      @include tablet {
+         width: calc(768px / 4 );
+         padding: 10px 15px;
+      }
+      @include mobile {
+         width: calc(500px / 4);
+         padding: 8px 10px;
+      }
+      @include mobile-s {
+         width: calc(390px / 4);
+         padding: 2px 5px;
+      }
+   }
+
+   &__block-icon {
+      display: block;
+      margin: 0 auto;
+      padding: 0.34px;
+      
+
+   }
+   &__block-icon--item {
+      width: 35px;
+      height: 35px;
+      max-width: 100%;
+
+   }
+   &__block-title {
+      align-items: center;
+      width: calc(110px / 100%);
+      height: 57px;
+      padding: 0;
+      margin: 10px 0;
+
+   }
+   &__block-title--item {
+      @include fluid-title;
+
+   }
+   &__block-subtitle {
+      padding: 30px 40px;
+      margin: 10px 0;
+      width: 164px;
+      height: 24px;
+      @include mobile {
+         padding: 5px 10px;
+         margin: 5px 0;
+         width: 100%;
+      }
+   }
+   &__block-subtitle-item {
+      @include fluid-text;
+      text-align: center !important;
+      white-space: nowrap !important;
+
+   }
+}
+// --------
