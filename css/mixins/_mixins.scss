@@ -1,5 +1,5 @@
-@mixin fluid-text($max:16, $min:14) {
-   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
+@mixin fluid-text($max:1.2, $min:1) {
+   font-size: clamp(#{$min}rem, #{$max / 1440 * 100}vw, #{$max}rem);
    color: var(--second-text-color);
    font-weight: 700;
    line-height: 20px;
@@ -75,11 +75,31 @@ white-space: nowrap;
    padding: 15px 22px;
    text-align: center;
    border-radius: 0px 5px;
-   @include fluid-text; 
+   @include fluid-text;
+   @include hover {
+      background-color: var(--hover-color);
+
+   } 
    @include tablet {
       width: 100px;
       height: 40px;
       padding: 10px 14px;
       
+   }
+}
+@mixin responsive-block {
+   width: 100%;
+   max-width: 1440px;
+   @include laptop {
+      max-width: $laptop;
+   }
+   @include tablet {
+      max-width: $tablet;
+   }
+   @include mobile {
+      max-width: $mobile;
+   }
+   @include mobile-s {
+      max-width: $mobile-s;
    }
 }

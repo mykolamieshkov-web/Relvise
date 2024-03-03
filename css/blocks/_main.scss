@@ -69,6 +69,11 @@ main.main {
   align-self: center;
    gap: 30px;
    flex-direction: row;
+   @include tablet {
+      margin-top: 25px;
+      gap:8px;
+      justify-content: center;
+   }
 
 
    &__block {
@@ -87,7 +92,7 @@ main.main {
       }
       @include mobile-s {
          width: calc(390px / 4);
-         padding: 2px 5px;
+         padding: 0;
       }
    }
 
@@ -143,15 +148,22 @@ main.main {
   align-self: center;
   gap: 30px;
   height: 347px;
-  width: 100%;
-  max-width: 100%; 
+  @include responsive-block;
   margin: 30px 0;
   padding: 0;
+@include tablet {
+   margin: 10px 0;
+   gap: 3px;
+   @include mobile-s {
+      gap: 1px;
+      justify-content: center;
+   }
+}
 
 
 
 &-card {
-   width: 25%;
+   width: calc(1440px / 4);
    height: 341px;
    max-height: 100%;
    margin: 0 30px;
@@ -159,14 +171,32 @@ main.main {
    align-items: center;
    display: flex;
    flex-direction: column;
-
+   flex-basis: 100%;
+   @include laptop {
+      width: calc($laptop / 4);
+   }
+   @include tablet {
+      width: calc($tablet / 4);
+      margin: 0 8px;
+   }
+   @include mobile {
+      width: calc($mobile / 4);
+   }
+   @include mobile-s {
+      width: calc($mobile-s / 4);
+   }
 }
 &-card-title {
    width: 127px;
    height: 40px;
    margin: 15px 0;
    padding: 0;
+   @include mobile {
+      width: 100%;
+      height: 38px;
+     
 
+   }
 }
 &-card-title--item {
  
@@ -186,13 +216,31 @@ text-align: left;
    width: 100%;
    height: 60px;
    align-items: center;
+   @include tablet {
+      margin: 10px 0;
+      max-width: 100%;
+      height: 40px;
+
+   }
+   @include mobile {
+      margin: 2.2rem 0;
+      width: 85px;
+      height: 34px;
+      align-items: left;
+      line-height: 12px !important;
+   }
 
 }
 &-card-subtitle--item {
    @include fluid-text;
    text-align: center;
+   @include mobile {
+      text-align: left;
+      margin-bottom: 1rem;
+   }
 
 }
+
 &-card__picture-container--1 {
    background-image: url("../img/main/advice__pictires/1.png");
    width: 100%;
@@ -200,6 +248,21 @@ text-align: left;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   @include tablet {
+      height: 100%;
+      
+      margin-top:2.1rem;
+   }
+   @include mobile {
+      width: 95px;
+      height: 90px;
+      margin-top: 62px;
+   }
+   @include mobile-s {
+      width: 45px;
+      height: 45px;
+      margin-top: 60px;
+   }
 
 }
 &-card__picture-container--2 {
@@ -208,7 +271,22 @@ text-align: left;
    height: 208px;
    background-repeat: no-repeat;
    background-position: center;
-   background-size: contain;
+   background-size: cover;
+   @include tablet {
+      height: 100%;
+      
+      margin-top:2.1rem;
+   }
+   @include mobile {
+      width: 95px;
+      height: 90px;
+      margin-top: 62px;
+   }
+   @include mobile-s {
+      width: 45px;
+      height: 45px;
+      margin-top: 60px;
+   }
 }
 &-card__picture-container--3 {
    background-image: url("../img/main/advice__pictires/3.png");
@@ -217,6 +295,21 @@ text-align: left;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   @include tablet {
+      height: 100%;
+      
+      margin-top:2.1rem;
+   }
+   @include mobile {
+      width: 95px;
+      height: 90px;
+      margin-top: 62px;
+   }
+   @include mobile-s {
+      width: 45px;
+      height: 45px;
+      margin-top: 60px;
+   }
 }
 &-card__picture-container--4 {
    background-image: url("../img/main/advice__pictires/4.png");
@@ -225,6 +318,22 @@ text-align: left;
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
+   margin-top: 2rem;
+   @include tablet {
+      height: 100%;
+      
+      margin-top:2.1rem;
+   }
+   @include mobile {
+      width: 95px;
+      height: 90px;
+      margin-top: 62px;
+   }
+   @include mobile-s {
+      width: 45px;
+      height: 45px;
+      margin-top: 60px;
+   }
 }
 }
 // ------
@@ -248,7 +357,9 @@ text-align: left;
       height: 492px;
       max-width: 42%;
       background-image: url("../img/main/video__block/cover.png");
-
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: top;
    }
    &-video__button {
       width: 100px;
@@ -268,6 +379,11 @@ text-align: left;
       @include hover {
          border: 3px solid var(--hover-color);
          cursor: pointer;
+      }
+      @include tablet {
+         width: 40px;
+         height: 40px;
+         
       }
    }
   
@@ -296,8 +412,13 @@ text-align: left;
       width: 100%;
       max-width: 330px;
       height: 60px;
+      @include tablet {
+         padding: 3px;
+         margin: 12px;
+      }
 
    }
+
    .video-block-video__list-subtitle--item {
       @include fluid-text;
       text-align: left !important;
@@ -310,10 +431,14 @@ text-align: left;
    }
    li.first__icon--list {
       list-style-image: url("/img/main/video__block/list-icons/1.svg");
-      margin: 30px;
+      margin: 30px 0;
       margin-left: 5px;
       color: var(--text-color);
+      @include tablet {
+         margin: 1rem 1rem;
+      }
    }
+
    li.second__icon--list {
       list-style-image: url("/img/main/video__block/list-icons/2.svg");
       margin: 30px;
@@ -392,9 +517,6 @@ text-align: left;
    background-color: var(--orange-color);
    color: var(--light-text-color); 
    
-   @include hover {
-      background-color: var(--hover-color);
-
-   }
+   
 } }
 // --------
