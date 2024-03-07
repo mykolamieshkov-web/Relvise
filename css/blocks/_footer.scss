@@ -1,0 +1,35 @@
+.footer {
+   width: 100%;
+   height: 74px;
+   background-color: none;
+   bottom: 0;
+   left: 0;
+   position: fixed;
+
+}
+.footer-content {
+   @include responsive-block;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+
+
+&__text {
+   justify-content: flex-start;
+   margin-left: 0.5rem;
+}
+&__text--item {
+@include fluid-text;
+text-align: left;
+}
+&__icons {
+   display: flex;
+   gap: 0.6rem;
+   justify-content: flex-end;
+}
+&__icons--item {
+   width: 24px;
+   height: 24px;
+
+}}
