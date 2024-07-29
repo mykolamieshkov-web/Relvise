@@ -2,7 +2,7 @@
     @include content-container;
     @include responsive-block;
     height: 100vh;
-    overflow-x: hidden;
+    overflow:auto;
     background-image: url("../img/header/background/background--item.png");
     background-repeat: no-repeat;
     background-size: contain;

@@ -1,11 +1,13 @@
-body {
-
+body,html {
+height: auto;
+min-height: 100%;
 font-size: 16px;
 font-family: "Montserrat", sans-serif;
 font-style: normal;
 color: var(--text-color);
 background-color: var(--light-color);
 line-height: 1.5;
+scroll-behavior: smooth;
 
 }
 p, a {
@@ -20,4 +22,8 @@ h2 {
 }
 h1 {
     @include fluid-h1;
+}
+section {
+    width: 100%;
+    height: auto;
 }
