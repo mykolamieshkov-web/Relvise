@@ -160,13 +160,16 @@ svg * {
   --hover-color: #335BF5;
 }
 
-body {
+body, html {
+  height: auto;
+  min-height: 100%;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   color: var(--text-color);
   background-color: var(--light-color);
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 p, a {
@@ -222,10 +225,17 @@ h1 {
   line-height: normal;
 }
 
+section {
+  width: 100%;
+  height: auto;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1920px;
-  overflow-x: hidden;
+  overflow: auto;
+  height: auto;
+  min-height: 100%;
 }
 @media (max-width: 1440px) {
   .wrapper {
@@ -255,7 +265,7 @@ h1 {
   width: 100%;
   max-width: 1920px;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: auto;
   background-image: url("../img/header/background/background--item.png");
   background-repeat: no-repeat;
   background-size: contain;
