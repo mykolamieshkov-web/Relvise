@@ -1,24 +1,4 @@
-
 .wrapper {
-   /* Общие стили */
-   max-width:100%;
-   width: 100%;
-   height: auto;
-   min-height: 100%;
+   @include responsive-block;
    overflow-x: hidden;
-  
-   @include laptop {
-    max-width: 1220px;
-   }
-   @include tablet {
-     max-width: 780px;
-   }
-   @include mobile {
-    max-width: 500px;
-   }
-
- 
-   @include mobile-s {
-     max-width: 393px;
-   }
- }
+}

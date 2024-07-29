@@ -1,6 +1,23 @@
-
 body {
-   font-family: 'Montserrat,sans-serif';
-   background-color: var(--light-background-color);
-   @include fluid-text;
+
+font-size: 16px;
+font-family: "Montserrat", sans-serif;
+font-style: normal;
+color: var(--text-color);
+background-color: var(--light-color);
+line-height: 1.5;
+
+}
+p, a {
+    @include fluid-text;
+ 
+}
+.content-wrapper {
+    @include content-container;
+}
+h2 {
+    @include fluid-title;
+}
+h1 {
+    @include fluid-h1;
 }

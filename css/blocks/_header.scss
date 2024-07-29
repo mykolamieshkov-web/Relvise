@@ -1,309 +1,268 @@
-header.header {
-   width: 100%;
-   height: 924px;
-   background-image: url("../img/header/background.png");
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   margin-bottom: 2%;
-   overflow: hidden;
-   
+.header {
+    @include content-container;
+    @include responsive-block;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url("../img/header/background/background--item.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    @include mobile {
+        height: calc(100vh / $constant);
+     
+    }
+    &-navigation--utility {
+       @include responsive-block;
+        padding-inline: 24px;
+        height: 52px;
+        display: flex;
+        gap:110px;
+        flex-direction: row;
+        @include mobile {
+            padding-inline: calc(24px / $constant);
+            gap: calc(30px / $constant);
+
+        }
+       
+        @include mobile-s {
+            gap: calc(18px / $constant);
+        }
+       
+
+
+    }
+    &-logo {
+        width: 187px;
+        height: 50px;
+        @include mobile {
+            width: calc(187px / $constant);
+        }
+
+    }
+    &-logo-item {
+        font-size: 24px;
+        letter-spacing: 0.1px;
+        color: var(--titles-color);
+        font-weight: bold;
+
+    }
+    &-links {
+        display: inline-flex;
+        flex-direction: row;
+       margin-top: 12px;
+        gap: 32px;
+        @include laptop {
+            gap: calc(32px / $constant);
+        }
+        @include mobile {
+            gap: calc(16px / $constant);
+            margin-top: calc(12px / $constant);
+        }
+        @include mobile-s {
+            gap: calc(12px / $constant);
+        }
+
+    }
+    &-links--item {
+        height: 45px;
+        max-height: 45px;
+
+        width: auto;
+
+        // 
+        text-decoration: none;
+        transition: 3s text-decoration ease-out;
+        @include hover {
+            text-decoration: underline 1.8px solid var(--hover-color);
+
+        }
+
+    }
+    // ------
+    &-text {
+        margin-top: 100px;
+        padding-inline: 24px;
+        @include laptop {
+            margin-top: calc(42px / $constant);
+            padding-inline: 16px;
+        }
+        @include tablet {
+            margin-top: calc(24px / $constant);
+            padding-inline: 8px;
+        }
+        @include mobile {
+            margin-top: calc(16px / $constant);
+            padding-inline: 4px;
+        }
+        @include mobile-s {
+            margin-top: calc(8px / $constant);
+            padding-inline: 2px;
+        }
+
+    }
+    &-titile {
+        width: 100%;
+        height: auto;
+
+    }
+    &-title--item {
+        margin-bottom: 24px;
+        @include tablet {
+            margin-bottom: calc(24px / $constant);
+        }
+        @include mobile {
+            margin-bottom: calc(16px / $constant);
+        }
+        @include mobile-s {
+            margin-left: calc(8px / $constant);
+        }
+        text-align: left;
+
+    }
+   &-subtitle {
+    width: 100%;
+
+    }
+   &-subtitle--item {
+    margin-bottom: 24px;
+    @include tablet {
+        margin-bottom: calc(24px / $constant);
+    }
+    @include mobile {
+        margin-bottom: calc(16px / $constant);
+    }
+    @include mobile-s {
+        margin-left: calc(8px / $constant);
+    }
+    text-align: left;
+    width: 100%;
+    height: auto;
+
+    }
+  &-btn {
+    display:  flex;
+    gap: 0.5rem;
+    width: 100%;
+
+    }
+    &-btn--item {
+        padding: 18px 5px;
+        border-radius: 37px;
+        text-align: center;
+        border: none;
+        width: 185px;
+        height: 48px;
+        transition:  border 3ms ease-in;
+        @include hover {
+            border: solid 1.618px var(--hover-color);
+        }
+        
+    }
+    .orange {
+        color: var(--light-color);
+        background-color: var(--orange-color);
+
+    }
+    .transparet {
+        background-color: transparent;
+        color: var(--green-color);
+        border: 1px solid var(--green-color);
+        transition:  border 3ms ease-in;
+        @include hover {
+            border: solid 1.618px var(--hover-color);
+        }
+    }
+    
+    &-boxes {
+        @include responsive-block;
+        @include content-container;
+        height: 260px;
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        flex-direction: row;
+        
+        @include mobile {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+    &-box {
+        max-width: 328px;
+        width: 33.3%;
+        height: 255px;
+        padding: 24px;
+        background-color: var(--light-color);
+        box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+        @include mobile {
+            height: 230px;
+            width: 100vw;
+            min-width: 100%;
+        }
+
+    }
+}
+
+.box-picture {
+    width: 100%;
+    height: 65px;
+    
+
+}
+.box-picture--item {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 8px;
   
-   @include tablet {
-      height: 65vh;
-      max-width: 100%;
-      background-size: 68%;
-      background-position: top;
-   }
-   @include mobile {
-      background-size: contain;
-      height: 100vh;
-      width: 100%;
-      max-width: 500px;
-      background-position: center;
-
-   }
-   @include mobile-s {
-      height: 100vh;
-      background-size: contain;
-      max-width: 390px;
-      background-position: center;
-   }
-}
-// ---------
-.navigation {
-   width: 100%;
-   max-width: 100%;
-   height: 104px;
-   margin-left: 15%;
-   display: flex;
-   justify-content: left;
-   align-items: center;
-   gap: 10px;
-   overflow-x: hidden;
-   @include tablet {
-      margin-left: 8%;
-   }
-   @include mobile {
-      margin-left: 12px;
-      gap: 8px;
-   }
-   @include mobile-s {
-      gap: 3px;
-      margin-left: 10px;
-   }
-
-
-   &__logo {
-margin-top:8px;
-width: 187px;
-height: 58px;
+    max-width: 100%;
 @include mobile {
-   width: 100px;
-   margin-top: 0;
-}
-@include mobile-s {
-   width: 100px;
-   margin-top: 0;
-}
-
-   }
-   &__logo--item {
-      /* h3 */
-text-align: left;
-@include fluid-title;
-height: 40px;
-
-   }
-   &__links {
-      margin-top: 8px;
-      align-items: center;
-      display: flex;
-      gap: 1rem;
-      @include mobile {
-         gap: 5px;
-         margin-top: 0.3rem; 
-      }
-      @include mobile-s {
-         gap: 0.5rem;
-         margin-top: 0.3rem;
-      }
-   }
-   &__links--item {
-      @include fluid-text;
-      transition:  text-decoration 0.3s ease;
-      height: 40px;
-      max-height: 40px;
-
-      @include hover {
-         text-decoration: underline 2px var(--hover-color);
-      }
-   }
-}
-// ---------
-.header-content {
-   @include flex-start;
-   flex-direction: column;
-   margin: 0px 120px;
-   padding: 0;
-   width: 509px;
-   height: 418px;
-   max-width: 509px;
-   @include tablet {
-      height: calc(418px / 1.6);
-      width: calc(509px / 1.6);
-   }
-   @include mobile { 
-      width: 100%;
-      max-width: 500px;
-      margin: 0px 30px;
-      height: 380px;
-      max-height: min-content;
-      margin-top: -2.2rem;
-   }
-
- &__title {
-   width: 509px;
-   height: 208px;
-   margin-bottom: 18px;
-   @include tablet {
-      width: calc(509px / 1.6);
-      height: calc(208px / 1.6);
-      max-width:  calc(509px / 1.6);
-      margin-bottom: 10px;
-   }
-   @include mobile {
-      
-      margin-bottom: 0.3rem;
-      height: fit-content;
-      width: 500px;
-      max-width: 500px;
-   }
-   @include mobile-s {
-      margin-top: -1.3rem;
-   }
-
- }  
- &__title--item {
-   @include fluid-h1;
- }
- &__subtitle {
-   width: 376px;
-   height: 60px;
-   margin-bottom: 18px;
-   @include tablet {
-      width: calc(376px / 1.6);
-      height: calc(60px / 1.6);
-      margin-bottom: 10px;
-   }
-   @include mobile {
-      width:100%;
-      max-width: 500px;
-      height: 33px;
-      margin-bottom: 0.3rem;
-   }
- }
- &__subtitle--item {
-@include fluid-text;
- }
- &__btn {
-   display: flex;
-   width: 100%;
-   max-width: 354px;
-   height: 48px;
-   @include tablet {
-      max-width: calc(354px / 1.6);
-      height: calc(48px / 1.6);
-   }
-   @include mobile {
-      width: calc(221px / 1.6);
-      height: 40px;
-   }
-
- }
- &__btn--color {
-   @include button;
-   background-color: var(--orange-color);
-   color: var(--light-text-color);
-   transition: border 0.3s ease;
-   @include hover {
-      border: 3px solid var(--hover-color);
-   }
- }
- &__btn--transparet {
-   @include button;
-   background: none;
-   transition: border 0.3s ease;
-   border: 2px solid var(--green-color);
-   color: var(--green-color);
-   @include hover {
-      border: 3px solid var(--hover-color);
-   }
- }
-}
-// -------
-.header-cards {
-   width: 100%;
-   max-width: 100%;
-   display: flex;
-   flex-direction: row;
-   margin:  80px 0;
-   padding: 0px;
-   justify-content: space-between;
-   @include tablet {
-      max-width: $tablet;
-      margin: 30px 0;
-      gap: 1.1rem;
-      width: 100%;
-      justify-content: center;
-   }
-   @include mobile {
-      max-width: $mobile;
-      justify-content: center;
-      margin: 0;
-      width: 100%;
-      gap: 1rem;
-      margin: 18% 0;
-   }
-   @include mobile-s {
-      max-width: $mobile-s;
-      justify-content: center;
-      margin: 1.2rem 0;
-      width: 100%;
-      gap: 0.3rem;
-   }
-&__card {
-   background-color: var(--light-text-color);
-   width: calc($laptop / 3);
-   height: 242px;
-   padding: 35px 40px;
-   /* SHADOW */
-box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
-@include tablet {
-   width: calc($tablet / 3);
-   padding:20px 25px;
-}
-@include mobile {
-   width: calc($mobile / 3);
-   padding: 10px 13px;
-}
-} 
-&__card--green {
-   background-color: var(--green-color);
-   width: 328px;
-   height: 242px;
-   padding: 35px 40px;
-   /* SHADOW */
-box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
-@include tablet {
-   width: calc($tablet / 3);
-   padding:20px 25px;
-   @include mobile {
-      width: calc($mobile / 3);
-      padding: 10px 13px;
-   }
-   @include mobile-s {
-      width: calc($mobile-s / 3);
-      padding: 5px 8px;
-   }
+    margin-inline: auto;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
 }
 }
-&__icon-container {
-   /* Vector */
-width: 48px;
-height: 47.41px;
-@include mobile {
-   width: 35px;
-   height: 35px;
-}
-@include mobile-s {
-   width: 25px;
-   height: 25px;
-}
+.box-title {
+    width: 100%;
+   height: auto;
+   margin-inline: 12px;
+    
 
 }
-&__icon-container--item {
-   max-width: 100%;
+.box-title--item {
+    color: var(--titles-color);
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 8px;
+    text-align: left;
+    @include mobile {
+        margin-bottom: 4px;
+        text-align: center;  
+    }
+}
+.box-paragraph {
+    width: 100%;
+    height: auto;
+    
+}
+.box-paragraph--item {
+
+    text-align: left;
+    height: auto;
+    line-height: normal;
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.green {
+    background-color: var(--green-color);
 
 }
-&__title-container {
-  width: 100%;
-   height: 64px;
-   max-height: 64px;
-   align-self: left;
-margin-top: 1.2rem;
+.white {
+    color: var(--light-color);
 
-} 
-&__title-container--item {
-  color: var(--text-color);
-   text-align: left;
- 
 }
-#white-text {
-   color: var(--light-text-color);
-}
-&__subtitle-container--item {
- text-align: left;
-}
-}
-// __________

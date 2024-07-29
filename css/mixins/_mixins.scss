@@ -1,105 +1,60 @@
-@mixin fluid-text($max:1.2, $min:1) {
-   font-size: clamp(#{$min}rem, #{$max / 1440 * 100}vw, #{$max}rem);
-   color: var(--second-text-color);
-   font-weight: 700;
-   line-height: 20px;
-   @include mobile-s {
-      line-height: 18px;
-   }
-}
-@mixin fluid-h1 ($max:58, $min:24){
-   font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
-   color: var(--text-color);
-   font-weight: 800;
-   line-height: 80px;
+// пример миксина под резиновый текст:
+@mixin fluid-text {
+   font-size: clamp(px, 1.68vw, 20px);
+   
    letter-spacing: 0.2px;
-   text-align: left;
-   @include tablet {
-      line-height: 45px;
-   }
-   @include mobile-s {
-      line-height: 32px;
-   }
 }
-@mixin fluid-title($max: 40, $min: 24) {
-font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
-font-weight: 700;
-line-height: 57px;
-letter-spacing: 0.2px;
-text-align: left;
-color: var(--text-color);
-@include tablet {
+@mixin fluid-h1 {
+   font-size: clamp(33.3px, 2.8vw, 54px);
+   color: var(--titles-color);
+   line-height: calc(80px / $constant);
+   font-weight: 800;
+   letter-spacing: 0.2px;
+   line-height: normal;
+}
+@mixin fluid-title {
+   font-size: clamp(24.7px, 2.08vw,40px);
+   color: var(--titles-color);
+   line-height: normal;
    font-weight: 700;
-   line-height: 32px;
-   letter-spacing: 0.1px;
+   letter-spacing: 0.2px;
+   text-align: center;
 }
-
+// миксин резинового блока: 
+@mixin responsive-block {
+width: 100%;
+max-width: 1920px;
+@include laptop {
+   max-width: $laptop;
 }
-@mixin flex-center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-@mixin flex-start {
-   justify-content: flex-start;
-   align-items: center;
-}
-@mixin button {
-width: 157px;
-height: 48px;
-align-items: center;
-text-align: center;
-padding: 10px 36px 10px 36px;
-margin: 0px 10px;
-border-radius: 37px;
-font-size: 14px;
-white-space: nowrap;
 @include tablet {
-   padding: 8px 20px;
-   margin: 0px 5px;
-   width: 120px;
-   height: 40px;
+   max-width:$tablet;
 }
 @include mobile {
-   padding: 2.2px 8px;
-   margin: 0px 2.5px;
-   width: 100px;
-   height: 28px;
+   max-width: $mobile;
+}
+@include mobile-s {
+   max-width: $mobile-s;
 }
 }
-@mixin button-square {
-   transition: backround-color 3ms ease;
-   margin-top: 30px;
-   width:117px;
-   height: 58px;
-   padding: 15px 22px;
-   text-align: center;
-   border-radius: 0px 5px;
-   @include fluid-text;
-   @include hover {
-      background-color: var(--hover-color);
-
-   } 
-   @include tablet {
-      width: 100px;
-      height: 52px;
-      padding: 10px 14px;
-      
-   }
-}
-@mixin responsive-block {
+@mixin content-container {
    width: 100%;
-   max-width: 1440px;
+   max-width: calc(1920px - 32px * 2);
+   padding: 32px;
    @include laptop {
-      max-width: $laptop;
+      max-width: calc($laptop - 19.7px * 2);
+      padding: 19.7px
    }
    @include tablet {
-      max-width: $tablet;
+      max-width: calc($tablet - 13px * 2);
+      padding: 13px;
    }
    @include mobile {
-      max-width: $mobile;
+      max-width: calc($mobile - 8px * 2);
+      padding: 8px;
    }
    @include mobile-s {
-      max-width: $mobile-s;
+      max-width: calc($mobile-s - 5px * 2);
+      padding: 5px;
    }
 }

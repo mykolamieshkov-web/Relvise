@@ -1,13 +1,8 @@
-@import 'root', 
-'fonts',
-'reset',
- 'mobile',
- 'mixins/mixins',
- 'blocks/wrapper',
- 'blocks/body',
- 'blocks/header',
- 'blocks/main',
- 'blocks/footer';
-
-
-
+@import 'reset','fonts', 'mobile','root',
+'mixins/mixins',
+'blocks/body',
+'blocks/wrapper',
+'blocks/header',
+'blocks/main',
+'blocks/footer'
+ ;
