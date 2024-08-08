@@ -1,16 +1,14 @@
 .header {
     @include content-container;
     @include responsive-block;
-    height: 100vh;
+    height: fit-content;
     overflow:auto;
     background-image: url("../img/header/background/background--item.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
-    @include mobile {
-        height: calc(100vh / $constant);
-     
-    }
+    
+    
     &-navigation--utility {
        @include responsive-block;
         padding-inline: 24px;

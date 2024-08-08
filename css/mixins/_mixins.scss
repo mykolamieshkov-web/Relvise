@@ -22,19 +22,18 @@
 }
 // миксин резинового блока: 
 @mixin responsive-block {
-width: 100%;
-max-width: 1920px;
+   width: min(100%, 100vw);
 @include laptop {
-   max-width: $laptop;
+   width: min(100%, $laptop);
 }
 @include tablet {
-   max-width:$tablet;
+   width: min(100%, $tablet);
 }
 @include mobile {
-   max-width: $mobile;
+   width: min(100%, $mobile);
 }
 @include mobile-s {
-   max-width: $mobile-s;
+   width: min(100%, $mobile-s);
 }
 }
 @mixin content-container {

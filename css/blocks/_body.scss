@@ -24,6 +24,7 @@ h1 {
     @include fluid-h1;
 }
 section {
-    width: 100%;
+    width: 100vw;
+    max-width: auto;
     height: auto;
 }
