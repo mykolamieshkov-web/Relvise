@@ -1099,6 +1099,11 @@ section {
     width: min(100%, 393px);
   }
 }
+@media (max-width: 500px) {
+  .featured-content {
+    gap: 1.2rem;
+  }
+}
 .featured-content--item {
   max-width: 100%;
   width: 153px;

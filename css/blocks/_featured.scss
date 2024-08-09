@@ -12,6 +12,9 @@
     align-items: center;
     gap: 2rem;
     padding-inline: 8px;
+    @include mobile {
+        gap: 1.2rem;
+    }
 
 }
 &-content--item {
