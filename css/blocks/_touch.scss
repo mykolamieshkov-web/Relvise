@@ -1,0 +1,67 @@
+.touch {
+@include responsive-block;
+height: auto;
+margin-top: 80px;
+display: flex;
+flex-direction: column;
+padding: 0.5rem;
+
+&-header {
+    margin-bottom: 2rem;
+
+}
+
+&-content {
+    @include content-container;
+    height: auto;
+    display: flex;
+    justify-content: row;
+    gap: 35%;
+    @include mobile {
+        gap: 12px;
+    }
+}
+&-content--container {
+    display: flex;
+    flex-direction: column;
+    
+
+}
+&-content--title {
+    margin-bottom: 32px;
+    text-align: left;
+    text-wrap: balance;
+
+}
+&-content--subtitle {
+    width: 100%;
+    height: 24px;
+    text-align: left;
+    text-wrap: nowrap;
+
+}
+&-button {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+
+}
+&-button--item {
+    width: 160px;
+    height: 58px;
+    padding: 40px 15px;
+    text-align: center;
+    border-radius: 5%;
+    background-color: var(--orange-color);
+    color: var(--light-color);
+    @include mobile {
+        width: 100px;
+        padding: 12px 6px;
+        height: 45px;
+        text-wrap: nowrap;
+    }
+    @include hover {
+        background-color: var(--hover-color);
+    }
+}
+}
