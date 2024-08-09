@@ -231,6 +231,16 @@ section {
   height: auto;
 }
 
+.utility-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.utility-subtitle {
+  text-align: center;
+  margin-inline: 32px;
+}
+
 .wrapper {
   width: min(100%, 100vw);
   overflow: auto;
@@ -762,4 +772,125 @@ section {
   text-align: center;
   text-wrap: balance;
   width: 100%;
+}
+
+.advice {
+  margin-top: 80px;
+  width: min(100%, 100vw);
+  height: auto;
+  padding: 8px;
+}
+@media (max-width: 1440px) {
+  .advice {
+    width: min(100%, 1440px);
+  }
+}
+@media (max-width: 768px) {
+  .advice {
+    width: min(100%, 768px);
+  }
+}
+@media (max-width: 500px) {
+  .advice {
+    width: min(100%, 500px);
+  }
+}
+@media (max-width: 393px) {
+  .advice {
+    width: min(100%, 393px);
+  }
+}
+.advice .advice-utility {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 10px;
+  flex-direction: column;
+}
+.advice .advice-content {
+  width: 100%;
+  max-width: 1856px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+}
+@media (max-width: 1440px) {
+  .advice .advice-content {
+    max-width: 1400.6px;
+    padding: 19.7px;
+  }
+}
+@media (max-width: 768px) {
+  .advice .advice-content {
+    max-width: 742px;
+    padding: 13px;
+  }
+}
+@media (max-width: 500px) {
+  .advice .advice-content {
+    max-width: 484px;
+    padding: 8px;
+  }
+}
+@media (max-width: 393px) {
+  .advice .advice-content {
+    max-width: 383px;
+    padding: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .advice .advice-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.advice .advice-box {
+  width: 240px;
+  height: 321px;
+}
+@media (max-width: 768px) {
+  .advice .advice-box {
+    margin-bottom: 32px;
+  }
+}
+.advice .advice-box h5 {
+  text-align: left;
+  color: var(--titles-color);
+  font-weight: bold;
+  font-size: 14px !important;
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .advice .advice-box h5 {
+    text-align: center;
+  }
+}
+.advice .advice-box p {
+  height: -moz-min-content;
+  height: min-content;
+  width: 164px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  margin-bottom: 18px;
+  text-wrap: balance;
+}
+@media (max-width: 768px) {
+  .advice .advice-box p {
+    text-align: center;
+    margin-left: 2rem;
+  }
+}
+.advice .advice-box img {
+  width: 230px;
+  height: 138px;
+  max-width: 100%;
+  margin-inline: auto;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
