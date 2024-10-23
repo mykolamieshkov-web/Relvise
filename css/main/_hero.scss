@@ -1,0 +1,186 @@
+.hero {
+    height: 800px;
+    width: 100%;
+  
+    &__content {
+      margin-top: 180px;
+      position: relative;
+      z-index: 2;
+      width: 509px;
+      height: 418px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+  
+      @include mobile {
+        width: 98vw;
+        margin-top: 90px;
+      }
+  
+      h1 {
+        margin-top: 30px;
+        margin-bottom: 35px;
+        font-size: 58px;
+        font-weight: bolder;
+        line-height: calc(80 / 58 * 100%);
+        letter-spacing: 0.2px;
+        color: var(--header-text);
+  
+        @include tablet {
+          font-size: calc(58px / 1.618);
+          line-height: calc(80 / 35 * 100%);
+          text-align: center;
+        }
+  
+        @include mobile {
+          margin-bottom: 12px;
+          line-height: calc(30.5 / 22 * 100%);
+          font-size: 22px;
+        }
+      }
+  
+      p {
+        width: 376px;
+        height: 60px;
+        margin-bottom: 35px;
+        line-height: calc(30 / 20 * 100%);
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        text-wrap: balance;
+  
+        @include mobile {
+          margin-bottom: 12px;
+          line-height: calc(18.5 / 16 * 100%);
+          font-size: 16px;
+          text-align: center;
+          width: 98vw;
+        }
+      }
+  
+      &--cards {
+        display: flex;
+       flex-flow: row wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+        margin-top: 80px;
+        margin-bottom: 35px;
+  
+        .card {
+            padding: 20px;
+          width: 328px;
+          height: 242px;
+          background-color: white;
+
+          
+       
+          box-shadow: 0 13px 19px #000000;
+  ;
+     
+  
+          h3 {
+           font-size: 24px;
+           line-height: calc(32 / 24 * 100%);
+            color: var(--header-text);
+            letter-spacing: 0.1px;
+            width: 234px;
+            height: 64px;
+            margin-bottom: 1rem;
+         }
+  
+          p {
+           margin-bottom: 1rem;
+           font-size: 14px;
+           line-height: calc(20 / 14 * 100%);
+          }
+          img {
+            margin-bottom: 1rem;
+          }
+        }
+  
+        .green {
+            padding: 20px;
+            width: 328px;
+          height: 242px;
+          background-color: var(--green-accent);
+          box-shadow: 0 13px 19px #000000;
+        }
+  
+        .white {
+          color: var(--background) !important;
+        }
+      }
+    }
+  
+    &__btns {
+      width: 98%;
+      display: flex;
+      flex-flow: row wrap;
+      gap: 10px;
+      margin-bottom: 35px;
+  
+      @include mobile-s {
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .button {
+        display: flex;
+        padding: 16px 10px;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        min-height: 48px;
+        border-radius: 37px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: calc(28 / 14 * 100%);
+        letter-spacing: 0.2px;
+        min-width: 187px;
+        transition: all 200ms ease-out;
+        @include hover {
+            color: var(--header-text);
+        }
+  
+        @include mobile {
+          min-width: 135px;
+        }
+      }
+  
+      .orange {
+        border: none;
+        background-color: var(--orange-accent);
+        color: #ffffff;
+      }
+  
+      .transparent {
+        background: transparent;
+        color: var(--green-accent);
+        border: 1px solid var(--green-accent);
+      }
+    }
+  
+    &__content--image {
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: calc(924px - 104px);
+      position: absolute;
+      z-index: 1;
+  
+      img {
+        object-fit: contain;
+        object-position: top;
+  
+        @include tablet {
+          object-position: right;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+//   ---hero closed

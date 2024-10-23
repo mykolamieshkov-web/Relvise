@@ -1,49 +1,134 @@
-body,html {
+body, html {
+ scroll-behavior: smooth;
 height: auto;
 min-height: 100%;
-font-size: 16px;
-font-family: "Montserrat", sans-serif;
-font-style: normal;
-color: var(--text-color);
-background-color: var(--light-color);
-line-height: 1.5;
-scroll-behavior: smooth;
+font-family: 'Montessarat', sans-serif;
+color: var(--text);
+font-weight: 400;
+line-height: calc(20 / 14 * 100%);
+letter-spacing: 0.2px;
+background: var(--background);
+}
 
+// скрываем тескт-подсказку для кнопок
+
+.visually-hidden {
+ @include visually-hidden; 
+  }
+// ограничивающий контейнер: 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    overflow: hidden;
+    @include mobile {
+        max-width: 98vw;
+       
+    }
 }
-p, a {
-    @include fluid-text;
- 
+.header-utility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-block: 40px;
+    h2 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: calc(57 / 40 * 100%);
+        color: var(--header-text);
+        letter-spacing: 0.2px;
+        text-align: center;
+        width: 80vw;
+        height: 57px;
+        margin-block: 20px;
+        @include tablet {
+            font-size: calc(40px / 1.618);
+           
+        }
+    }
+    p {
+        font-size: 14px;
+        font-weight: medium;
+        line-height: calc(20 / 14 * 100%);
+        height: 40px;
+        width: 511px;
+        letter-spacing: 0.2px;
+        text-align: center;
+        @include tablet {
+            width: 98vw;
+        }
+
+    }
 }
-.content-wrapper {
-    @include content-container;
+// ----- icons row 
+.icons-row {
+    margin-top: 25px;
+    height: 175px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
-h2 {
-    @include fluid-title;
+// ------   CONTACT US SECTION: 
+.business { 
+    width: 100%;
+    height: 65px;
+    margin: 8px;
+    padding: 10px;
+    @include tablet {
+        margin-block: 32rem;
+    }
+
+    // .business__content
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+
+    }
+
+    // .business__text
+
+    &__text {
+        display: flex;
+        flex-flow: column nowrap;
+        h3 {
+            color: var(--header-text);
+            font-size: 24px;
+            line-height: calc(32 / 24 * 100%);
+            letter-spacing: 0.2px;
+            font-weight: bold;
+        }
+       
+    }
+
+    // .business__btn
+
+    &__btn {
+       display: inline-flex;
+       @include mobile {
+        display: block;
+        margin: 12px auto;
+       }
+
+    }
 }
-h1 {
-    @include fluid-h1;
-}
-section {
-    width: 100vw;
-    max-width: auto;
-    height: auto;
-}
-.utility-title {
+
+.btn--square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-bottom: 16px;
-}
-.utility-subtitle {
-    text-align: center;
-    margin-inline: 32px;
-
-}
-#people {
-    list-style-image: url("../img/video/icons/icon-list--1.svg");
-    margin-left: 32px;
-
-}
-#settings {
-    list-style-image: url("../img/video/icons/icon-list--2.svg");
-    margin-left: 32px;
-
+    background-color: var(--orange-accent);
+    color: var(--background);
+    min-width: 160px;
+    max-height: 58px;
+    padding: 40px 15px;
+    border: none;
+    border-radius: 5px;
 }

@@ -1,0 +1,71 @@
+.benefits { // give huge white-space for top on mobile
+    margin-top: 12rem;
+    height: 526px;
+    @include tablet {
+        margin-top: 36rem;
+        height: auto;
+
+    }
+    // .benefits__content
+
+    &__content {
+        height: inherit;
+        margin-block: 32px;
+        overscroll-behavior:initial;
+        overflow: hidden;
+    }
+
+    // .benefits__boxes
+
+    &__boxes {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        gap: 30px;
+        row-gap: 3.2rem;
+    }
+
+
+    // .benefits__boxes--box
+
+    &__boxes--box {
+        width: 238px;
+        height: 209px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        @include tablet {
+            height: fit-content;
+        }
+
+        img {
+            margin-inline: auto;
+            display: block;
+            margin-bottom: 12px;
+
+        }
+        h2 {
+            font-size: 40px;
+            line-height: calc(57 / 40 * 100%);
+            text-align: center;
+            color: var(--header-text);
+            margin-bottom: 12px;
+
+        }
+        p {
+            font-size: 16px;
+            line-height: calc(24 / 16 * 100%);
+            width: 126px;
+            height: 24px;
+            letter-spacing: 0.2px;
+            text-wrap: nowrap;
+            text-align: center;
+
+        }
+    }
+}
+
+

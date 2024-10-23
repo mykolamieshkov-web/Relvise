@@ -1,12 +1,13 @@
 @import 'reset','fonts', 'mobile','root',
 'mixins/mixins',
 'blocks/body',
-'blocks/wrapper',
 'blocks/header',
 'blocks/main',
 'blocks/footer',
- 'blocks/experience',
- 'blocks/advice',
- 'blocks/video',
- 'blocks/featured',
- 'blocks/touch';
+'main/hero',
+'main/benefits',
+'main/features',
+'main/about', 
+'main/form', 
+'main/contact'
+ ;

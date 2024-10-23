@@ -1,266 +1,67 @@
 .header {
-    @include content-container;
-    @include responsive-block;
-    height: fit-content;
-    overflow:auto;
-    background-image: url("../img/header/background/background--item.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-    
-    
-    &-navigation--utility {
-       @include responsive-block;
-        padding-inline: 24px;
-        height: 52px;
+    background: var(--background);
+    height: 104px;
+    max-width: 1322px;
+    margin-bottom: 35px;
+    z-index: 2;
+    position: absolute;
+    padding: 40px;
+ 
+    .menu {
         display: flex;
-        gap:110px;
-        flex-direction: row;
-        @include mobile {
-            padding-inline: calc(24px / $constant);
-            gap: calc(30px / $constant);
-
-        }
-       
-        @include mobile-s {
-            gap: calc(18px / $constant);
-        }
-       
-
-
-    }
-    &-logo {
-        width: 187px;
-        height: 50px;
-        @include mobile {
-            width: calc(187px / $constant);
-        }
-
-    }
-    &-logo-item {
-        font-size: 24px;
-        letter-spacing: 0.1px;
-        color: var(--titles-color);
-        font-weight: bold;
-
-    }
-    &-links {
-        display: inline-flex;
-        flex-direction: row;
-       margin-top: 12px;
-        gap: 32px;
-        @include laptop {
-            gap: calc(32px / $constant);
-        }
-        @include mobile {
-            gap: calc(16px / $constant);
-            margin-top: calc(12px / $constant);
-        }
-        @include mobile-s {
-            gap: calc(12px / $constant);
-        }
-
-    }
-    &-links--item {
-        height: 45px;
-        max-height: 45px;
-
-        width: auto;
-
-        // 
-        text-decoration: none;
-        transition: 3s text-decoration ease-out;
-        @include hover {
-            text-decoration: underline 1.8px solid var(--hover-color);
-
-        }
-
-    }
-    // ------
-    &-text {
-        margin-top: 100px;
-        padding-inline: 24px;
-        @include laptop {
-            margin-top: calc(42px / $constant);
-            padding-inline: 16px;
-        }
-        @include tablet {
-            margin-top: calc(24px / $constant);
-            padding-inline: 8px;
-        }
-        @include mobile {
-            margin-top: calc(16px / $constant);
-            padding-inline: 4px;
-        }
-        @include mobile-s {
-            margin-top: calc(8px / $constant);
-            padding-inline: 2px;
-        }
-
-    }
-    &-titile {
-        width: 100%;
-        height: auto;
-
-    }
-    &-title--item {
-        margin-bottom: 24px;
-        @include tablet {
-            margin-bottom: calc(24px / $constant);
-        }
-        @include mobile {
-            margin-bottom: calc(16px / $constant);
-        }
-        @include mobile-s {
-            margin-left: calc(8px / $constant);
-        }
-        text-align: left;
-
-    }
-   &-subtitle {
-    width: 100%;
-
-    }
-   &-subtitle--item {
-    margin-bottom: 24px;
-    @include tablet {
-        margin-bottom: calc(24px / $constant);
-    }
-    @include mobile {
-        margin-bottom: calc(16px / $constant);
-    }
-    @include mobile-s {
-        margin-left: calc(8px / $constant);
-    }
-    text-align: left;
-    width: 100%;
-    height: auto;
-
-    }
-  &-btn {
-    display:  flex;
-    gap: 0.5rem;
-    width: 100%;
-
-    }
-    &-btn--item {
-        padding: 18px 5px;
-        border-radius: 37px;
-        text-align: center;
-        border: none;
-        width: 185px;
-        height: 48px;
-        transition:  border 3ms ease-in;
-        @include hover {
-            border: solid 1.618px var(--hover-color);
-        }
-        
-    }
-    .orange {
-        color: var(--light-color);
-        background-color: var(--orange-color);
-
-    }
-    .transparet {
-        background-color: transparent;
-        color: var(--green-color);
-        border: 1px solid var(--green-color);
-        transition:  border 3ms ease-in;
-        @include hover {
-            border: solid 1.618px var(--hover-color);
-        }
-    }
-    
-    &-boxes {
-        @include responsive-block;
-        @include content-container;
-        height: 260px;
-        margin-top: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 32px;
-        flex-direction: row;
-        
-        @include mobile {
-            flex-direction: column;
             justify-content: flex-start;
-        }
-    }
-    &-box {
-        max-width: 328px;
-        width: 33.3%;
-        height: 255px;
-        padding: 24px;
-        background-color: var(--light-color);
-        box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
-        @include mobile {
-            height: 230px;
-            width: 100vw;
-            min-width: 100%;
-        }
+            align-items: center;
+            align-items: center;
+            flex-flow: row nowrap;
+            height: inherit;
+            max-width: 98vw;
+        
+		// .menu__logo
 
-    }
-}
+		&__logo {
+            color: #252B42;
+            font-weight: bold;
+            letter-spacing: 0.1px;
+            line-height: calc(32 / 24 * 100%);
+            font-size: 24px;
+		}
 
-.box-picture {
-    width: 100%;
-    height: 65px;
-    
+		
 
-}
-.box-picture--item {
-    width: 65px;
-    height: 65px;
-    margin-bottom: 8px;
-  
-    max-width: 100%;
-@include mobile {
-    margin-inline: auto;
-    display: block;
-    width: 32px;
-    height: 32px;
-    margin-bottom: 4px;
-}
-}
-.box-title {
-    width: 100%;
-   height: auto;
-   margin-inline: 12px;
-    
 
-}
-.box-title--item {
-    color: var(--titles-color);
-    font-size: 24px;
-    line-height: normal;
-    margin-bottom: 8px;
-    text-align: left;
-    @include mobile {
-        margin-bottom: 4px;
-        text-align: center;  
-    }
-}
-.box-paragraph {
-    width: 100%;
-    height: auto;
-    
-}
-.box-paragraph--item {
+		// .menu__links
 
-    text-align: left;
-    height: auto;
-    line-height: normal;
-    @include mobile {
-        text-align: center;
-    }
+		&__links {
+            margin-left: 126px;
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 280px;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            overflow: hidden;
+            @include mobile {
+                margin-left: calc(126px / 1.618);
+                gap: 10px;
+            }
+		}
+
+		// .menu__links--item
+
+		&__links--item {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: calc(24 / 14 * 100%);
+            letter-spacing: 0.2px;
+            text-align: center;
+            transition: all 200ms ease;
+            @include hover {
+                color: var(--orange-accent);
+            }
+		}
+}
 }
 
-.green {
-    background-color: var(--green-color);
 
-}
-.white {
-    color: var(--light-color);
+ 
 
-}
